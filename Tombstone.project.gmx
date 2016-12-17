@@ -11,6 +11,7 @@
     <sprite>sprites\spr_npc_idle</sprite>
     <sprite>sprites\spr_npc_mask</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_tombstone</sprite>
     <sprite>sprites\spr_spikes</sprite>
     <sprite>sprites\spr_npc_wall</sprite>
     <sprite>sprites\spr_platform_1</sprite>
@@ -78,6 +79,7 @@
     <objects name="Solids">
       <object>objects\obj_solid</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_tombstone</object>
       <object>objects\obj_npc_wall</object>
       <object>objects\obj_platform_1</object>
       <object>objects\obj_platform_2</object>

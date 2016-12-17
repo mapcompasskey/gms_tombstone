@@ -72,10 +72,12 @@ if ( ! dying && ! hurting)
         var pos_x = x;
         var pos_y = y;
         
+        // round the x/y to the neartest tile
         pos_x = (pos_x - (pos_x % global.TILE_SIZE));
         pos_y = (pos_y - (pos_y % global.TILE_SIZE));
         
-        instance_create(pos_x, pos_y, obj_wall);
+        // create a tombstone object
+        instance_create(pos_x, pos_y, obj_tombstone);
     }
 }
 
