@@ -17,6 +17,7 @@ if ( ! persistent)
 // GRAV - the gravity
 // ROOM_SPEED - the speed of the first room (ie: 30, 60)
 
+global.TILE_SIZE = 16;
 global.PLAYER = noone;
 global.RIGHT = 1;
 global.LEFT = -1;

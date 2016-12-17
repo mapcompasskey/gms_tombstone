@@ -62,3 +62,35 @@ if ( ! dying && ! hurting)
     }
 }
 
+// check if colliding with spikes
+if ( ! dying && ! hurting)
+{
+    if (place_meeting(x, y, obj_spike))
+    {
+        dying = true;
+        
+        var pos_x = x;
+        var pos_y = y;
+        
+        pos_x = (pos_x - (pos_x % global.TILE_SIZE));
+        pos_y = (pos_y - (pos_y % global.TILE_SIZE));
+        
+        instance_create(pos_x, pos_y, obj_wall);
+    }
+}
+
+// if dying
+if (dying)
+{
+    dying = false;
+    
+    // reposition the player
+    x = start_x;
+    y = start_y;
+    
+    // move towards the player
+    scr_camera_update(x, y, false);
+}
+
+
+

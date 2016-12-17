@@ -14,6 +14,9 @@ max_velocity_y = (speed_y * 2);
 scale_x = 1.0;
 scale_y = 1.0;
 
+start_x = 0;
+start_y = 0;
+
 image_speed = 0;
 sprite_index = spr_player_idle;
 mask_index = spr_player_mask;

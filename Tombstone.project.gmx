@@ -11,6 +11,7 @@
     <sprite>sprites\spr_npc_idle</sprite>
     <sprite>sprites\spr_npc_mask</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_spikes</sprite>
     <sprite>sprites\spr_npc_wall</sprite>
     <sprite>sprites\spr_platform_1</sprite>
     <sprite>sprites\spr_platform_2</sprite>
@@ -46,6 +47,7 @@
           <script>scripts\scr_player_create.gml</script>
           <script>scripts\scr_player_step.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
+          <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_draw.gml</script>
         </scripts>
         <scripts name="NPC">
@@ -79,6 +81,9 @@
       <object>objects\obj_npc_wall</object>
       <object>objects\obj_platform_1</object>
       <object>objects\obj_platform_2</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\obj_spike</object>
     </objects>
   </objects>
   <rooms name="rooms">
