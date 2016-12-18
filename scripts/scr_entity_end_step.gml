@@ -56,11 +56,11 @@ if (has_physics)
 // keep instance inside the room
 if (bbox_right < 0)
 {
-    x = (room_width - sprite_width);
+    x = (room_width - (sprite_width * 2));
 }
 else if (bbox_left > room_width)
 {
-    x = sprite_width;
+    x = (sprite_width * 2);
 }
 
 if (bbox_top > room_height)

@@ -22,7 +22,7 @@ global.PLAYER = noone;
 global.RIGHT = 1;
 global.LEFT = -1;
 global.TICK = 1;
-global.GRAV = 0.2;
+global.GRAV = 500;
 global.ROOM_SPEED = room_speed;
 
 // input keys to listen for

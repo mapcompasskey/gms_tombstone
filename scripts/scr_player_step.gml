@@ -3,7 +3,7 @@
 event_inherited();
 
 // check if jumping and/or falling
-if ( ! hurting && ! dying)
+if ( ! dying && ! hurting)
 {
     // if grounded and just pressed the JUMP button
     if (grounded && ! jumping && global.PLAYER_KEY_JUMP_PRESSED)
@@ -84,15 +84,23 @@ if ( ! dying && ! hurting)
 // if dying
 if (dying)
 {
-    dying = false;
+    //visible = false;
     
-    // reposition the player
-    x = start_x;
-    y = start_y;
-    
-    // move towards the player
-    scr_camera_update(x, y, false);
+    restart_timer += global.TICK;
+    if (restart_timer > restart_time)
+    {
+        dying = false;
+        //visible = true;
+        
+        // reposition the player
+        x = start_x;
+        y = start_y;
+        
+        // move towards the player
+        scr_camera_update(x, y, false);
+        
+        // reset timer
+        restart_timer = 0;
+    }
 }
-
-
 
