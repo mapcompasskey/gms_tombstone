@@ -15,6 +15,9 @@ max_velocity_y = 0; //(speed_y * 2);
 // collision
 movement_collision_script = scr_player_movement_collision;
 
+// states
+create_tombstone = false;
+
 // drawing
 image_speed = 0;
 sprite_index = spr_player_idle;

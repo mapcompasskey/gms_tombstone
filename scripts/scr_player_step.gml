@@ -70,17 +70,33 @@ if ( ! dying && ! hurting)
     if (place_meeting(x, y, obj_spike))
     {
         dying = true;
-        
-        var pos_x = x;
-        var pos_y = y;
-        
-        // round the x/y to the neartest tile
-        pos_x = (pos_x - (pos_x % global.TILE_SIZE));
-        pos_y = (pos_y - (pos_y % global.TILE_SIZE));
-        
-        // create a tombstone object
-        instance_create(pos_x, pos_y, obj_tombstone);
+        create_tombstone = true;
     }
+}
+
+// check if colliding with npcs
+if ( ! dying && ! hurting)
+{
+    if (place_meeting(x, y, obj_npc))
+    {
+        dying = true;
+        create_tombstone = true;
+    }
+}
+
+if (create_tombstone)
+{
+    create_tombstone = false;
+    
+    var pos_x = x;
+    var pos_y = (y - 1);
+    
+    // round the x/y to the neartest tile
+    pos_x = (pos_x - (pos_x % global.TILE_SIZE));
+    pos_y = (pos_y - (pos_y % global.TILE_SIZE));
+    
+    // create a tombstone object
+    instance_create(pos_x, pos_y, obj_tombstone);    
 }
 
 // if dying
