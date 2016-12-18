@@ -48,6 +48,16 @@ global.PLAYER_KEY_JUMP_RELEASED = false;
 //global.PLAYER_KEY_ATTACK_1 = false;
 //global.PLAYER_KEY_ATTACK_2 = false;
 
+// CURRENT_DOOR_CODE - The code of the door being exited from. Used to place the player during their "Room Start" event.
+// CURRENT_ROOM_ID - The id of the room being exited into. *Not used at the moment since the built in "room" variable returns the current room's id.
+// PREVIOUS_DOOR_CODE - The previous door exited from. *Not used at the moment.
+// PREVIOUS_ROOM_ID - The id of the previous room. Used to determine which destroyed enemies in which rooms to allow a respawn.
+
+global.CURRENT_DOOR_CODE = '1-01';
+global.CURRENT_ROOM_ID = noone;
+global.PREVIOUS_DOOR_CODE = '';
+global.PREVIOUS_ROOM_ID = noone;
+
 
 //
 // Update Every Room's Dimensions

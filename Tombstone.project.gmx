@@ -61,6 +61,13 @@
           <script>scripts\scr_npc_movement_collision.gml</script>
         </scripts>
       </scripts>
+      <scripts name="Misc">
+        <scripts name="Door">
+          <script>scripts\scr_door_create.gml</script>
+          <script>scripts\scr_door_step.gml</script>
+          <script>scripts\scr_door_draw.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="Rooms">
       <script>scripts\scr_room_initialize_created.gml</script>
