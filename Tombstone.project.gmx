@@ -77,6 +77,7 @@
       <script>scripts\scr_camera_update.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_game_start</object>
