@@ -42,6 +42,7 @@ global.KEY_ENTER = vk_enter;
 global.PLAYER_KEY_LEFT = false;
 global.PLAYER_KEY_RIGHT = false;
 global.PLAYER_KEY_UP = false;
+global.PLAYER_KEY_UP_RELEASED = false;
 global.PLAYER_KEY_DOWN = false;
 global.PLAYER_KEY_JUMP_PRESSED = false;
 global.PLAYER_KEY_JUMP_RELEASED = false;
@@ -53,7 +54,7 @@ global.PLAYER_KEY_JUMP_RELEASED = false;
 // PREVIOUS_DOOR_CODE - The previous door exited from. *Not used at the moment.
 // PREVIOUS_ROOM_ID - The id of the previous room. Used to determine which destroyed enemies in which rooms to allow a respawn.
 
-global.CURRENT_DOOR_CODE = '1-01';
+global.CURRENT_DOOR_CODE = '';
 global.CURRENT_ROOM_ID = noone;
 global.PREVIOUS_DOOR_CODE = '';
 global.PREVIOUS_ROOM_ID = noone;

@@ -2,7 +2,9 @@
 
 event_inherited();
 
-// check if jumping and/or falling
+//
+// Check if jumping and/or falling
+//
 if ( ! dying && ! hurting)
 {
     // if grounded and just pressed the JUMP button
@@ -13,7 +15,7 @@ if ( ! dying && ! hurting)
         velocity_y = -speed_y;
     }
     
-    /*
+    /**/
     // if pressed the JUMP button while jumping
     if (jumping && global.PLAYER_KEY_JUMP_PRESSED)
     {
@@ -22,7 +24,7 @@ if ( ! dying && ! hurting)
         grounded = false;
         velocity_y = -speed_y;
     }
-    */
+    /**/
     
     // reduce jump height
     if (jumping && velocity_y < 0 && global.PLAYER_KEY_JUMP_RELEASED)
@@ -44,7 +46,10 @@ if ( ! dying && ! hurting)
     }
 }
 
-// check if walking
+
+//
+// Check if walking
+//
 if ( ! dying && ! hurting)
 {
     walking = false;
@@ -64,7 +69,54 @@ if ( ! dying && ! hurting)
     }
 }
 
-// check if colliding with spikes
+
+//
+// Check if colliding with a Door
+//
+if (place_meeting(x, y, obj_door))
+{
+    // get the door
+    var door = instance_place(x, y, obj_door);
+    if (door != noone)
+    {
+        with (door)
+        {
+            if (exit_door_code != '' && exit_room_id != noone)
+            {
+                // highlight the door
+                is_colliding_with = other.id
+                
+                // if the Up key is released
+                if (global.PLAYER_KEY_UP_RELEASED)
+                {
+                    // clear all inputs
+                    global.PLAYER_KEY_UP_RELEASED = false;
+                    io_clear();
+                    
+                    // check if the room exist
+                    if (room_exists(exit_room_id))
+                    {
+                        // update globals
+                        global.PREVIOUS_DOOR_CODE = global.CURRENT_DOOR_CODE;
+                        global.PREVIOUS_ROOM_ID = global.CURRENT_ROOM_ID;
+                        global.CURRENT_DOOR_CODE = exit_door_code;
+                        global.CURRENT_ROOM_ID = exit_room_id;
+                        
+                        // switch rooms
+                        room_goto(exit_room_id);
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
+
+
+//
+// Check if colliding with spikes
+//
 if ( ! dying && ! hurting)
 {
     if (place_meeting(x, y, obj_spike))
@@ -74,7 +126,10 @@ if ( ! dying && ! hurting)
     }
 }
 
-// check if colliding with npcs
+
+//
+// Check if colliding with npcs
+//
 if ( ! dying && ! hurting)
 {
     if (place_meeting(x, y, obj_npc))
@@ -84,6 +139,10 @@ if ( ! dying && ! hurting)
     }
 }
 
+
+//
+// Create a tombstone
+//
 if (create_tombstone)
 {
     create_tombstone = false;
@@ -99,7 +158,10 @@ if (create_tombstone)
     instance_create(pos_x, pos_y, obj_tombstone);    
 }
 
-// if dying
+
+//
+// If dying
+//
 if (dying)
 {
     visible = false;
