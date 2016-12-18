@@ -12,10 +12,11 @@
     <sprite>sprites\spr_npc_mask</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_tombstone</sprite>
-    <sprite>sprites\spr_spikes</sprite>
     <sprite>sprites\spr_npc_wall</sprite>
     <sprite>sprites\spr_platform_1</sprite>
     <sprite>sprites\spr_platform_2</sprite>
+    <sprite>sprites\spr_spikes</sprite>
+    <sprite>sprites\spr_door</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -88,11 +89,13 @@
     </objects>
     <objects name="Misc">
       <object>objects\obj_spike</object>
+      <object>objects\obj_door</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_stage_1</room>
+    <room>rooms\rm_stage_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
