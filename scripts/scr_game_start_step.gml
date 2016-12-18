@@ -1,11 +1,5 @@
 ///scr_game_start_step()
 
-/*
-// track the amount of time that has passed since the last frame
-var dt = room_speed / 1000000 * delta_time;
-global.TICK = min(2, dt);
-*/
-
 // convert the amount of microseconds that have passed since the last step to seconds
 var dt = (1/1000000 * delta_time);
 
