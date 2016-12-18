@@ -30,19 +30,20 @@
       </scripts>
       <scripts name="Entities">
         <scripts name="Entity">
+          <script>scripts\scr_entity_create.gml</script>
+          <script>scripts\scr_entity_step.gml</script>
+          <script>scripts\scr_entity_end_step.gml</script>
+          <script>scripts\scr_entity_draw.gml</script>
+          <script>scripts\scr_entity_movement_collision.gml</script>
           <scripts name="Collision">
-            <script>scripts\scr_entity_movement_collision.gml</script>
             <script>scripts\scr_entity_check_collision_with_solids.gml</script>
+            <script>scripts\scr_entity_check_collision_with_tombstones.gml</script>
             <script>scripts\scr_entity_check_collision_with_platforms.gml</script>
             <script>scripts\scr_entity_check_collision_with_npc_walls.gml</script>
             <script>scripts\scr_entity_test_movement_collision.gml</script>
             <script>scripts\scr_entity_check_edge_of_solids.gml</script>
             <script>scripts\scr_entity_check_edge_of_platforms.gml</script>
           </scripts>
-          <script>scripts\scr_entity_create.gml</script>
-          <script>scripts\scr_entity_step.gml</script>
-          <script>scripts\scr_entity_end_step.gml</script>
-          <script>scripts\scr_entity_draw.gml</script>
         </scripts>
         <scripts name="Player">
           <script>scripts\scr_player_create.gml</script>
@@ -50,12 +51,13 @@
           <script>scripts\scr_player_end_step.gml</script>
           <script>scripts\scr_player_room_start.gml</script>
           <script>scripts\scr_player_draw.gml</script>
+          <script>scripts\scr_player_movement_collision.gml</script>
         </scripts>
         <scripts name="NPC">
           <script>scripts\scr_npc_create.gml</script>
           <script>scripts\scr_npc_step.gml</script>
-          <script>scripts\scr_npc_movement_collision.gml</script>
           <script>scripts\scr_npc_draw.gml</script>
+          <script>scripts\scr_npc_movement_collision.gml</script>
         </scripts>
       </scripts>
     </scripts>

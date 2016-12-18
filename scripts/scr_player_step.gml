@@ -13,6 +13,7 @@ if ( ! dying && ! hurting)
         velocity_y = -speed_y;
     }
     
+    /*
     // if pressed the JUMP button while jumping
     if (jumping && global.PLAYER_KEY_JUMP_PRESSED)
     {
@@ -21,6 +22,7 @@ if ( ! dying && ! hurting)
         grounded = false;
         velocity_y = -speed_y;
     }
+    */
     
     // reduce jump height
     if (jumping && velocity_y < 0 && global.PLAYER_KEY_JUMP_RELEASED)
@@ -84,13 +86,13 @@ if ( ! dying && ! hurting)
 // if dying
 if (dying)
 {
-    //visible = false;
+    visible = false;
     
     restart_timer += global.TICK;
     if (restart_timer > restart_time)
     {
         dying = false;
-        //visible = true;
+        visible = true;
         
         // reposition the player
         x = start_x;

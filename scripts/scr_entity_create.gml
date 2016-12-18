@@ -28,6 +28,8 @@ jump_bounce_min = 0;   // 1   - if less than 1
 // collision
 entity_hit_solid_x = false;
 entity_hit_solid_y = false;
+entity_hit_tombstone_x = false;
+entity_hit_tombstone_y = false;
 entity_hit_platform_y = false;
 entity_hit_npc_wall_x = false;
 entity_hit_npc_wall_x = false;
@@ -49,6 +51,10 @@ falling = false;
 facing = global.RIGHT;
 scale_x = 1.0;
 scale_y = 1.0;
+
+image_speed = 0;
+sprite_index = noone;
+mask_index = noone;
 
 // inputs
 key_left = false;

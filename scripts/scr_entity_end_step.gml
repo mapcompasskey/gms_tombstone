@@ -54,17 +54,18 @@ if (has_physics)
 }
     
 // keep instance inside the room
+// *sprite_width can be negative when facing LEFT
 if (bbox_right < 0)
 {
-    x = (room_width - (sprite_width * 2));
+    x = (room_width - abs(sprite_width));
 }
 else if (bbox_left > room_width)
 {
-    x = (sprite_width * 2);
+    x = abs(sprite_width);
 }
 
 if (bbox_top > room_height)
 {
-    y = sprite_height;
+    y = abs(sprite_height);
 }
 

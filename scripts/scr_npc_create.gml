@@ -3,11 +3,11 @@
 event_inherited();
 
 // physics
-speed_x = 1;
-speed_y = 3;
+speed_x = 50;
+speed_y = 160;
 
-max_velocity_x = (speed_x * 2);
-max_velocity_y = (speed_y * 2);
+max_velocity_x = 0; //(speed_x * 2);
+max_velocity_y = 0; //(speed_y * 2);
 
 // collision
 movement_collision_script = scr_npc_movement_collision;
