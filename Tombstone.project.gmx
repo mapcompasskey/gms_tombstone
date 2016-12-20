@@ -63,6 +63,12 @@
           <script>scripts\scr_npc_draw.gml</script>
           <script>scripts\scr_npc_movement_collision.gml</script>
         </scripts>
+        <scripts name="Bullet">
+          <script>scripts\scr_bullet_create.gml</script>
+          <script>scripts\scr_bullet_end_step.gml</script>
+          <script>scripts\scr_bullet_draw.gml</script>
+          <script>scripts\scr_bullet_movement_collision.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Misc">
         <scripts name="Door">
@@ -73,12 +79,6 @@
         <scripts name="Turret">
           <script>scripts\scr_turret_create.gml</script>
           <script>scripts\scr_turret_step.gml</script>
-        </scripts>
-        <scripts name="Bullet">
-          <script>scripts\scr_bullet_create.gml</script>
-          <script>scripts\scr_bullet_end_step.gml</script>
-          <script>scripts\scr_bullet_draw.gml</script>
-          <script>scripts\scr_bullet_movement_collision.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -98,6 +98,7 @@
       <object>objects\obj_entity</object>
       <object>objects\obj_player</object>
       <object>objects\obj_npc</object>
+      <object>objects\obj_bullet</object>
     </objects>
     <objects name="Solids">
       <object>objects\obj_solid</object>
@@ -111,7 +112,6 @@
       <object>objects\obj_spike</object>
       <object>objects\obj_door</object>
       <object>objects\obj_turret</object>
-      <object>objects\obj_bullet</object>
     </objects>
   </objects>
   <rooms name="rooms">

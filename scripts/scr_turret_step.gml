@@ -29,7 +29,7 @@ if (global.PLAYER)
     }
 }
 
-// track the time between attack
+// track the time between attacks
 if (can_attack)
 {
     attack_timer += global.TICK;
@@ -37,8 +37,11 @@ if (can_attack)
     {
         attack_timer = 0;
         
+        // get the bullet's starting position
         var pos_x = (x + (facing * 5));
         var pos_y = (y - (bbox_bottom - bbox_top) + 5);
+        
+        // create the bullet instance
         var bullet = instance_create(pos_x, pos_y, obj_bullet);
         with (bullet)
         {

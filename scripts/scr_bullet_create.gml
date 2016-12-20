@@ -5,7 +5,7 @@ event_inherited();
 // physics
 gravity_factor = 0;
 
-speed_x = 100;
+speed_x = 200;
 speed_y = 0;
 
 max_velocity_x = 0; //(speed_x * 2);

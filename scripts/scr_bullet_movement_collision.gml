@@ -1,5 +1,9 @@
 ///scr_bullet_movement_collision()
 
+//
+// Bullet Movement Collision Tests
+//
+
 // test movemvent collisions
 scr_entity_check_collision_with_solids();
 

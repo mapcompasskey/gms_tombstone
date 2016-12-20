@@ -1,6 +1,8 @@
 ///scr_npc_movement_collision()
 
-//scr_entity_movement_collision();
+//
+// NPC Movement Collision Tests
+//
 
 // test movemvent collisions
 scr_entity_check_collision_with_solids();
