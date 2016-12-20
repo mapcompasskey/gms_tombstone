@@ -141,6 +141,19 @@ if ( ! dying && ! hurting)
 
 
 //
+// Check if colliding with bullets
+//
+if ( ! dying && ! hurting)
+{
+    if (place_meeting(x, y, obj_bullet))
+    {
+        dying = true;
+        create_tombstone = true;
+    }
+}
+
+
+//
 // Create a tombstone
 //
 if (create_tombstone)

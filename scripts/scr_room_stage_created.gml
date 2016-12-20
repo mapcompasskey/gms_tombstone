@@ -1,4 +1,19 @@
-///scr_room_stage_created()
+///scr_room_stage_created(default door code)
+
+// if default door code is used
+if (argument_count > 0)
+{
+    // add the player if doesn't exist
+    if (global.PLAYER == noone)
+    {
+        // set default door code
+        var default_door_code = argument[0];
+        global.CURRENT_DOOR_CODE = default_door_code;
+        
+        // add player instance
+        global.PLAYER = instance_create(0, 0, obj_player);
+    }
+}
 
 // update room speed
 room_speed = global.ROOM_SPEED;

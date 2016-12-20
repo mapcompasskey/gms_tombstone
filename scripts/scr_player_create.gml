@@ -4,6 +4,7 @@ event_inherited();
 
 // update global
 global.PLAYER = id;
+persistent = true;
 
 // physics
 speed_x = 100;
