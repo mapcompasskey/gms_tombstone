@@ -53,8 +53,8 @@ scale_x = 1.0;
 scale_y = 1.0;
 
 image_speed = 0;
-sprite_index = noone;
-mask_index = noone;
+//sprite_index = noone;
+//mask_index = noone;
 
 // inputs
 key_left = false;
